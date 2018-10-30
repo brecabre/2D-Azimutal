@@ -22,9 +22,14 @@ func _ready():
 func _on_Creditos_pressed():
 	get_tree().change_scene(\"res://Ejecutable/Creditos/Creditos.tscn\")
 	pass # replace with function body
+
+
+func _on_Jugar_pressed():
+	get_tree().change_scene(\"res://Ejecutable/Select Personaje/SelectPersonaje.tscn\")
+	pass # replace with function body
 "
 
-[node name="MenuPrincipal" type="Node"]
+[node name="MenuPrincipal" type="Node" index="0"]
 
 script = SubResource( 1 )
 
@@ -118,6 +123,8 @@ text = "Creditos"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[connection signal="pressed" from="Jugar" to="." method="_on_Jugar_pressed"]
 
 [connection signal="pressed" from="Creditos" to="." method="_on_Creditos_pressed"]
 
