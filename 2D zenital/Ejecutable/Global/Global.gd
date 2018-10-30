@@ -1,4 +1,4 @@
 extends Node
 
-var personaje = 
-var nivel = 
+var personaje = 0
+var nivel = 0
