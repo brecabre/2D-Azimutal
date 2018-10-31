@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Ejecutable/Menu Principal/MenuPrincipal.gd" type="Script" id=1]
+[ext_resource path="res://Ejecutable/Select Personaje/SelectPersonaje.gd" type="Script" id=1]
 
 [node name="SelectPlayer" type="Node"]
 

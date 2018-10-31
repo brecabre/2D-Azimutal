@@ -2,4 +2,6 @@
 
 [node name="nivel1" type="Node2D" index="0"]
 
+[node name="PosicionSalida" type="Position2D" parent="." index="0"]
+
 
