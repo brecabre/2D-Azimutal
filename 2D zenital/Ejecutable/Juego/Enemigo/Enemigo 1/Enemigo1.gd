@@ -25,7 +25,7 @@ func _process(delta):
 		punto.x = pos.x - 2 * velocidad
 		
 		
-	set_position(Vector2(pos)  )
+	#set_position(Vector2(pos)  )
 	#	orientacion, vale así?
 	look_at(Vector2(punto))
 	print ( delta)
