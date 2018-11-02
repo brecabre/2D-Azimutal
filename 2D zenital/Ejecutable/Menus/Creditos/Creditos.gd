@@ -16,5 +16,5 @@ func _ready():
 
 
 func _on_MenuPrincipal_pressed():
-	get_tree().change_scene("res://Ejecutable/Menu Principal/MenuPrincipal.tscn")
+	get_tree().change_scene("res://Ejecutable/Menus/Menu Principal/MenuPrincipal.tscn")
 	pass # replace with function body

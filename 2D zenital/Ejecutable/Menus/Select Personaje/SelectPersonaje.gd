@@ -5,7 +5,7 @@ func _load_scene(personaje):
 	Global.personaje.set_name("personaje")
 #	Global.coche.connect("pressed", self, "_back")
 #	print ("coche seleccionado: " + str(car))
-	get_tree().change_scene("res://Ejecutable/Select Niveles/SelectNiveles.tscn")
+	get_tree().change_scene("res://Ejecutable/Menus/Select Niveles/SelectNiveles.tscn")
 
 
 
