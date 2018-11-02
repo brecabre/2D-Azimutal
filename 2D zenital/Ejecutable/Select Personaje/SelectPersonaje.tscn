@@ -1,39 +1,12 @@
 [gd_scene load_steps=2 format=2]
 
-[sub_resource type="GDScript" id=1]
+[ext_resource path="res://Ejecutable/Select Personaje/SelectPersonaje.gd" type="Script" id=1]
 
-script/source = "extends Node
+[node name="SelectPlayer" type="Node"]
 
-# class member variables go here, for example:
-# var a = 2
-# var b = \"textvar\"
+script = ExtResource( 1 )
 
-func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
-
-
-func _on_Creditos_pressed():
-	get_tree().change_scene(\"res://Ejecutable/Creditos/Creditos.tscn\")
-	pass # replace with function body
-
-
-func _on_Jugar_pressed():
-	get_tree().change_scene(\"res://Ejecutable/Select Personaje/SelectPersonaje.tscn\")
-	pass # replace with function body
-"
-
-[node name="MenuPrincipal" type="Node"]
-
-script = SubResource( 1 )
-
-[node name="Jugar" type="Button" parent="." index="0"]
+[node name="Player 1" type="Button" parent="." index="0"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -41,9 +14,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 131.0
-margin_top = 39.0
+margin_top = 18.0
 margin_right = 143.0
-margin_bottom = 59.0
+margin_bottom = 38.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -58,15 +31,15 @@ group = null
 flat = false
 align = 1
 
-[node name="Jugar" type="Label" parent="Jugar" index="0"]
+[node name="Player 1" type="Label" parent="Player 1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 13.0
+margin_left = 19.0
 margin_top = 4.0
-margin_right = 53.0
+margin_right = 70.0
 margin_bottom = 18.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -74,21 +47,22 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Jugar"
+text = "Player 1"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Creditos" type="Button" parent="." index="1"]
+[node name="Player 2" type="Button" parent="." index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 131.0
-margin_top = 71.0
-margin_right = 143.0
-margin_bottom = 91.0
+margin_left = 129.0
+margin_top = 52.0
+margin_right = 141.0
+margin_bottom = 72.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -103,15 +77,15 @@ group = null
 flat = false
 align = 1
 
-[node name="Creditos" type="Label" parent="Creditos" index="0"]
+[node name="Player 2" type="Label" parent="Player 2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 13.0
+margin_left = 19.0
 margin_top = 4.0
-margin_right = 53.0
+margin_right = 70.0
 margin_bottom = 18.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -119,13 +93,13 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Creditos"
+text = "Player 2"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[connection signal="pressed" from="Jugar" to="." method="_on_Jugar_pressed"]
+[connection signal="pressed" from="Player 1" to="." method="_on_Player_1_pressed"]
 
-[connection signal="pressed" from="Creditos" to="." method="_on_Creditos_pressed"]
+[connection signal="pressed" from="Player 2" to="." method="_on_Player_2_pressed"]
 
 
