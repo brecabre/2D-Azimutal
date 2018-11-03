@@ -14,5 +14,10 @@ func _ready():
 #	# Update game logic here.
 #	pass
 func _on_Creditos_pressed():
-	get_tree().change_scene("res://Ejecutable/Creditos/Creditos.tscn")
+	get_tree().change_scene("res://Ejecutable/Menus/Creditos/Creditos.tscn")
+	pass # replace with function body
+
+
+func _on_Jugar_pressed():
+	get_tree().change_scene("res://Ejecutable/Menus/Select Personaje/SelectPersonaje.tscn")
 	pass # replace with function body
