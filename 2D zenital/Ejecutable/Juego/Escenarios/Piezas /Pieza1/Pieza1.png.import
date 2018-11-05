@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pieza1.png-6fc4e048887e61f009c454e78c155048.stex"
+path="res://.import/Pieza1.png-057486df58b88171f13065ca3fcde99e.stex"
 
 [deps]
 
-source_file="res://Ejecutable/Juego/Escenarios/Piezas_/Pieza1/Pieza1.png"
-dest_files=[ "res://.import/Pieza1.png-6fc4e048887e61f009c454e78c155048.stex" ]
+source_file="res://Ejecutable/Juego/Escenarios/Piezas /Pieza1/Pieza1.png"
+dest_files=[ "res://.import/Pieza1.png-057486df58b88171f13065ca3fcde99e.stex" ]
 
 [params]
 

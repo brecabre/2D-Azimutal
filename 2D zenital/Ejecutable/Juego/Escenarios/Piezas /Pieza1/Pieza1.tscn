@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Ejecutable/Juego/Escenarios/Piezas_/Pieza1/Pieza1.png" type="Texture" id=1]
+[ext_resource path="res://Ejecutable/Juego/Escenarios/Piezas /Pieza1/Pieza1.png" type="Texture" id=1]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

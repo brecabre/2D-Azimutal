@@ -2,8 +2,7 @@
 
 [ext_resource path="res://Ejecutable/Menus/Select Niveles/SelectNiveles.gd" type="Script" id=1]
 
-
-[node name="SelectNiveles" type="Node"]
+[node name="SelectNiveles" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
