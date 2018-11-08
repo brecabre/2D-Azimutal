@@ -6,16 +6,13 @@ var MenuPrincipal = preload("res://Ejecutable/Menus/Menu Principal/MenuPrincipal
 
 
 func _ready():
-
 	set_process(true)
 	pass
 
 func _process(delta):
-
 	contador += 100*delta
 	if contador > tope:
 		print("fuera")
-		$"/root/Global Menus".add_child(MenuPrincipal)
-		$"/root/Global Menus/Musica Menus".play()
+		get_node("/root/Global Menus").add_child(prePrincipal)
 		$".".queue_free()
 	pass

@@ -7,26 +7,29 @@ const UP = Vector2(0,1)
 var motion = Vector2()
 var velocidad  = 10000
 
-
+# var pal cambio gameover
+var preGameOver = preload("res://Ejecutable/Menus/Game Over/GameOver.tscn").instance()
+var Personaje1Muerto
 
 # var pa la vida:
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	Global.vida = 100
+	Global.vida = 10
 	set_process(true)
 	pass
 
 func _process(delta):
+	#¿por que se ha cambiao el fisic del proces?
 	#simulación gravedad
 #	motion.y += 4
 
-# esto  no se que es
-	print ("angulo en radianes: " + str( motion.angle()))
+# esto  no se que es, creo que by Bravo
+#	print ("angulo en radianes: " + str( motion.angle()))
 
 
-	#movimiento: poner valores según entradas curceta lateral
+	#movimiento: poner valores a la velo lineal según entradas cruceta lateral
 	if Input.is_action_pressed("ui_right"):
 		print("derecha")
 		motion.x = velocidad * delta
@@ -52,8 +55,8 @@ func _process(delta):
 		position.x = 0
 	if position.y < 0:
 		position.y = 0
-	print ("pos X: " + str(position.x))
-	print ("pos Y: " + str(position.y))
+#	print ("pos X: " + str(position.x))
+#	print ("pos Y: " + str(position.y))
 
 #esto es una prueba pa la colision
 #esto me gusta pa platarformas
@@ -69,13 +72,24 @@ func _process(delta):
 		print("colision!!")
 		#disminuye la vida
 		Global.vida -= 1
+		print("Vida: " + str(Global.vida))
 	
-
+#la muerte de la cucuracha :) :) 
+	if Global.vida < 0:
+		get_node("/root/Global Menus").add_child(preGameOver)
+		$".".queue_free()
+		print("no muero")
+		
+		#esto es una prueba pa a apagar la partida 
+		get_tree().get_root() # Access via scene main loop.
+		Personaje1Muerto = get_parent()
+		Personaje1Muerto.get_parent().get_parent().queue_free()
+		
 #mover: poniendo el valor de movimiento motion aqui velo lineal
 	motion = move_and_slide(motion,UP)
 #	probar a quintar el UP)
-#	giro
+#	girar
 	look_at(position + motion)
-	print("Vida: " + str(Global.vida))
+	
 #	# Update game logic here.
 	pass
