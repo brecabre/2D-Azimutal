@@ -13,6 +13,6 @@ func _process(delta):
 	contador += 100*delta
 	if contador > tope:
 		print("fuera")
-		get_node("/root/Global Menus").add_child(prePrincipal)
+		get_node("/root/Global Menus").add_child(MenuPrincipal)
 		$".".queue_free()
 	pass
