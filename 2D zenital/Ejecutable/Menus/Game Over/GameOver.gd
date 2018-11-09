@@ -14,5 +14,6 @@ func _process(delta):
 	if contador > tope:
 		print("fuera")
 		get_node("/root/Global Menus").add_child(MenuPrincipal)
+		get_parent().get_node("Musica Menus").play()
 		$".".queue_free()
 	pass
