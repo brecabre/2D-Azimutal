@@ -2,7 +2,7 @@ extends Node
 
 var tope = 120
 var contador = 0
-var MenuPrincipal = preload("res://Ejecutable/Menus/Menu Principal/MenuPrincipal.tscn").instance()
+onready var MenuPrincipal = preload("res://Ejecutable/Menus/Menu Principal/MenuPrincipal.tscn").instance()
 
 
 func _ready():
