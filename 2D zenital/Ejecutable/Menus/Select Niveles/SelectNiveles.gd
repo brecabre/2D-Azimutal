@@ -18,7 +18,7 @@ func _on_Nivel1_pressed():
 	_load_scene("res://Ejecutable/Juego/Escenarios/Niveles/Nivel1/nivel1.tscn")
 	pass
 	
-func _on_Button_pressed():
+#func _on_Button_pressed():
 #	get_parent().get_node("Musica Menus").play()
-	$"/root/Global Menus/Musica Menus".play()
-	pass 
+#	$"/root/Global Menus/Musica Menus".play()
+#	pass 
