@@ -4,7 +4,7 @@ var Creditos = preload("res://Ejecutable/Menus/Creditos/Creditos.tscn").instance
 var Jugar = preload("res://Ejecutable/Menus/Select Personaje/SelectPersonaje.tscn").instance()
 
 func _ready():
-	$Musica.play()
+	
 	pass
 
 func _on_Creditos_pressed():
