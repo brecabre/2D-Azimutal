@@ -9,13 +9,13 @@ func _load_scene(nivel):
 	Global.nivel = partida.get_name()
 	partida.set_name("partida")
 	partida.get_node("PosicionSalida").add_child(Global.personaje)
-	partida.add_child(botonMenPrin)
 	get_parent().get_parent().add_child(partida)
 	get_parent().get_node("Musica Menus").stop()
 	$".".queue_free()
 
 func _on_Nivel1_pressed():
 	_load_scene("res://Ejecutable/Juego/Escenarios/Niveles/Nivel1/nivel1.tscn")
+	get_parent().get_node("boton").play()
 	pass
 	
 #func _on_Button_pressed():
