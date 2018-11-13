@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD Personaje/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 1 Vida/HUD1vida.tscn" type="PackedScene" id=2]
 
 [node name="HUD" type="Node"]
 
@@ -26,5 +27,10 @@ text = "HUD: información y variables:"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="HUD1vidaNodo" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 500, 500 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 

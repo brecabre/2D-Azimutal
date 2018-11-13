@@ -15,6 +15,6 @@ func _on_Creditos_pressed():
 
 func _on_Jugar_pressed():
 	get_node("/root/Global Menus").add_child(Jugar)
-	get_parent().get_node("boton").play()
+	#get_parent().get_node("boton").play()
 	$".".queue_free()
 	pass 

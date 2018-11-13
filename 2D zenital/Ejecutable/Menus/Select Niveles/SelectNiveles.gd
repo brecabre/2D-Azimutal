@@ -15,7 +15,10 @@ func _load_scene(nivel):
 
 func _on_Nivel1_pressed():
 	_load_scene("res://Ejecutable/Juego/Escenarios/Niveles/Nivel1/nivel1.tscn")
-	get_parent().get_node("boton").play()
+#	get_parent().get_node("boton").play()
+# quito el play del soido
+# no va en ningún botón escena , solo lo quito aquí de momento
+
 	pass
 	
 #func _on_Button_pressed():
