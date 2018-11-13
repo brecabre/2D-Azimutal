@@ -24,5 +24,5 @@ func _process(delta):
 #	GraficaVida.set_position(Vector2(posi1vida))
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
-	GraficaVida.set_text("La vida: "+ str(Global.vida))
+	GraficaVida.set_text("La vida: "+ str(Global.vida)+" con scrip")
 	pass
