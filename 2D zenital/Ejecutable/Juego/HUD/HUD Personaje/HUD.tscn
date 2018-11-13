@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD Personaje/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD 1 Vida/HUD1vida.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 2 Tiempo/HUD2tiempo.tscn" type="PackedScene" id=3]
 
 [node name="HUD" type="Node"]
 
@@ -32,5 +33,7 @@ max_lines_visible = -1
 
 position = Vector2( 500, 500 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="HUD2tiempoNodo" parent="." index="2" instance=ExtResource( 3 )]
 
 
