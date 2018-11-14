@@ -8,7 +8,8 @@ var GraficaVida
 var posi1vida = Vector2(815,40)
 
 var preTime = preload("res://Ejecutable/Juego/HUD/HUD Datos Comunes/Datos_comunes.tscn").instance()
-
+var GarfTiempo
+var tiempoPartida
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -17,7 +18,12 @@ func _ready():
 	GraficaVida = get_node("/root/partida/HUD/Datos_comunes/Label_datos_comunes")
 	GraficaVida.set_text("Aquí pondré la vida actualizada")
 	GraficaVida.set_position(posi1vida)
-	#
+	
+	add_child(preTime)
+	GarfTiempo = get_node("/root/partida/HUD/@Datos_comunes@2/Label_datos_comunes")
+	GarfTiempo.set_position(Vector2(posi1vida.x , posi1vida.y+60))
+	
+	print(tiempoPartida)
 
 	pass
 
@@ -27,5 +33,9 @@ func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 	GraficaVida.set_text("La vida: "+ str(Global.vida)+" con scrip")
-
+	
+#	tiempoPartida = get_node("/root/partida/HUD/HUD2tiempoNodo/Datos_comunes/Label_datos_comunes").start_time
+	tiempoPartida = get_node("/root/partida/HUD/HUD2tiempoNodo").get("start_time")
+	GarfTiempo.set_text("Tiempo transcurrido: "+ str((OS.get_ticks_msec() - tiempoPartida)/1000)+" s (scrip)")
+	
 	pass
