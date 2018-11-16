@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD Personaje/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD 1 Vida/HUD1vida.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD 2 Tiempo/HUD2tiempo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 3 Puntos/HUD3Puntos.tscn" type="PackedScene" id=4]
 
-[node name="HUD" type="Node"]
+[node name="HUD" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -15,9 +16,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 807.0
-margin_top = 13.0
+margin_top = 10.0
 margin_right = 997.0
-margin_bottom = 27.0
+margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -28,6 +29,7 @@ text = "HUD: información y variables:"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
 
 [node name="HUD1vidaNodo" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -35,5 +37,9 @@ position = Vector2( 500, 500 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="HUD2tiempoNodo" parent="." index="2" instance=ExtResource( 3 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="HUD3puntosNodo" parent="." index="3" instance=ExtResource( 4 )]
 
 
