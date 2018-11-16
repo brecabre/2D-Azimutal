@@ -1,9 +1,6 @@
 extends Node
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-var NumInstan
+var MiNodoHUD
 var preDatos = preload("res://Ejecutable/Juego/HUD/HUD Datos Comunes/Datos_comunes.tscn").instance()
 var GraficaVida
 var posi1vida = Vector2(815,40)
@@ -25,23 +22,25 @@ func _ready():
 	GraficaVida.set_position(posi1vida)
 	
 	add_child(preTime)
-	GarfTiempo = get_node("/root/partida/HUD/@Datos_comunes@2/Label_datos_comunes")
+	MiNodoHUD = get_children()
+	MiNodoHUD[4].set_name("Text_Tiempo")
+	GarfTiempo = get_node("/root/partida/HUD/Text_Tiempo/Label_datos_comunes")
 	GarfTiempo.set_position(Vector2(posi1vida.x , posi1vida.y+60))
+	
 	add_child(prePuntos)
-	GrafPuntos = get_node("/root/partida/HUD/@Datos_comunes@3/Label_datos_comunes")
+	MiNodoHUD = get_children()
+	MiNodoHUD[5].set_name("Text_Puntos")
+	GrafPuntos = get_node("/root/partida/HUD/Text_Puntos/Label_datos_comunes")
 	GrafPuntos.set_position(Vector2(posi1vida.x , posi1vida.y+80))
 
 
 func _process(delta):
-#	GraficaVida.set_position(Vector2(posi1vida))
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
+	#Actualizo valor de pantalla "La vida: 
 	GraficaVida.set_text("La vida: "+ str(Global.vida)+" con scrip")
-	
-#	
+	#Actualizo valor de pantalla "Tiempo transcurrido:
 	tiempoPartida = get_node("/root/partida/HUD/HUD2tiempoNodo").get("start_time")
 	GarfTiempo.set_text("Tiempo transcurrido: "+ str((OS.get_ticks_msec() - tiempoPartida)/1000)+" s (scrip)")
-#
+	##Actualizo valor de pantalla "Los puntos:
 	GrafPuntos.set_text("Los puntos: "+ str(Global.puntos)+" con scrip")
 	
 	pass
