@@ -33,6 +33,7 @@ func _process(delta):
 
 
 func _on_Area2D_body_entered(body):
+
 #	porsi quieres vida
 #	Global.vida += 20
 	Global.puntos += SumaVida
@@ -44,6 +45,8 @@ func _on_Area2D_body_entered(body):
 	PuntosP1.set_text(""+ str(SumaVida) + " puntos")
 	PuntosP1.set("custom_colors/font_color",Color(1,0,0))
 	banderaVisible = true
+	# error: como solo se esconde puedes entrar varia veces
+	# error: solucion mover fuera de la pantalla
 	$".".hide()
 
 
