@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # esta no lo tengo claro
-const UP = Vector2(0,1)
+#const UP = Vector2(0,1)
 
 # var pa movimiento:
 var motion = Vector2()
@@ -63,8 +63,9 @@ func _process(delta):
 #esto me gusta pa platarformas
 	if  is_on_floor():
 		print("en el suelo")
-		bajaVida()
-		Global.vida -= 1
+		print($".".get_slide_collision(0))
+#		bajaVida()
+		
 	if is_on_wall():
 		print("pared")
 		bajaVida()
@@ -72,10 +73,9 @@ func _process(delta):
 		
 #esto detecta collision
 	if is_on_ceiling():
-
 		print("colision!!")
-		#disminuye la vida
-		bajaVida()
+		print($".".get_slide_collision(0))
+#		bajaVida()
 		
 
 	
@@ -91,7 +91,8 @@ func _process(delta):
 		Personaje1Muerto.get_parent().get_parent().queue_free()
 		
 #mover: poniendo el valor de movimiento motion aqui velo lineal
-	motion = move_and_slide(motion,UP)
+	motion = move_and_slide(motion)
+#	motion = move_and_slide(motion,UP)
 #	probar a quintar el UP)
 #	girar
 	look_at(position + motion)
