@@ -11,7 +11,7 @@ func _ready():
 	# Initialization here
 	graf_tiempo = get_node("/root/partida/HUD/HUD2tiempoNodo/Datos_comunes/Label_datos_comunes")
 	graf_tiempo.set_text("Aquí pondré la vida actualizada")
-	graf_tiempo.set_position(Vector2(815,80))
+	graf_tiempo.set_position(Vector2(815,100))
 	pass
 
 func _process(delta):
