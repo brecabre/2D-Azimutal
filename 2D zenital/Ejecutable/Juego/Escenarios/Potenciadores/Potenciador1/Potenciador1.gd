@@ -9,6 +9,10 @@ var tiempoEntra = 20
 var banderaVisible = false
 var VeloNum =100
 var contColor
+var posicion
+
+func _ready():
+	posicion = $".".get_position()
 
 
 func _process(delta):
@@ -33,7 +37,8 @@ func _process(delta):
 
 
 func _on_Area2D_body_entered(body):
-
+	
+	
 #	porsi quieres vida
 #	Global.vida += 20
 	Global.puntos += SumaVida
@@ -41,13 +46,15 @@ func _on_Area2D_body_entered(body):
 	add_child(prePuntosP1)
 	tiempoEntra = OS.get_ticks_msec()
 	PuntosP1 =get_node("/root/partida/Potenciador1/Datos_comunes/Label_datos_comunes")	
-	PuntosP1.set_position(Vector2($".".position.x , $".".position.y))#	GraficaVida.set_text("Aquí pondré la vida actualizada")
+	PuntosP1.set_position(posicion)#	GraficaVida.set_text("Aquí pondré la vida actualizada")
 	PuntosP1.set_text(""+ str(SumaVida) + " puntos")
 	PuntosP1.set("custom_colors/font_color",Color(1,0,0))
-	banderaVisible = true
-	# error: como solo se esconde puedes entrar varia veces
+	print($".".set_position(Vector2(-300,-300)))
+	# error: como solo se "esconde" puedes entrar varia veces
 	# error: solucion mover fuera de la pantalla
-	$".".hide()
+#	$".".hide()
+	banderaVisible = true
+	
 
 
 	pass 
