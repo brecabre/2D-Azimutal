@@ -52,6 +52,8 @@ func _process(delta):
 # Limites para el movimiento
 	if position.x > get_viewport().size.x:
 		position.x = get_viewport().size.x
+	if position.y > get_viewport().size.y:
+		position.y = get_viewport().size.y
 	if position.x < 0:
 		position.x = 0
 	if position.y < 0:
