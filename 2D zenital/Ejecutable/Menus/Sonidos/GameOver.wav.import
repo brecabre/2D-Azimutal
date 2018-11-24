@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/thunder2.wav-62cb39c23c2de5f92ea982e90d3f283f.sample"
+path="res://.import/GameOver.wav-875b6e13a5d43ff1df2dd750f2b1e178.sample"
 
 [deps]
 
-source_file="res://Ejecutable/Menus/Sonidos/thunder2.wav"
-dest_files=[ "res://.import/thunder2.wav-62cb39c23c2de5f92ea982e90d3f283f.sample" ]
+source_file="res://Ejecutable/Menus/Sonidos/GameOver.wav"
+dest_files=[ "res://.import/GameOver.wav-875b6e13a5d43ff1df2dd750f2b1e178.sample" ]
 
 [params]
 

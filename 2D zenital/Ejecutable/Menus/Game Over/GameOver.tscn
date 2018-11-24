@@ -2,7 +2,8 @@
 
 [ext_resource path="res://Ejecutable/Menus/Game Over/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Menus/Comunes/Boton Menu principal.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Ejecutable/Menus/Sonidos/thunder2.wav" type="AudioStream" id=3]
+[ext_resource path="res://Ejecutable/Menus/Sonidos/GameOver.wav" type="AudioStream" id=3]
+
 
 [node name="GameOver" type="Node" index="0"]
 
