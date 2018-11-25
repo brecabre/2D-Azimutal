@@ -13,21 +13,31 @@ func apretarGatillo(position, rotation):
 	
 	
 
-func _physics_process(delta):
+func _process(delta):
+	
+	
+	
+	
 	var collision = move_and_collide(velocity * delta)
+	
 	if collision:
-		queue_free()
+		if collision.get_collider().is_in_group("Player"):
+			Global.vida -= 1
 		
-#________Este codigo es para que la bala pueda rebotar__________
+		print(collision.get_collider().is_in_group("Player"))
+		queue_free()
+#
+##________Este codigo es para que la bala pueda rebotar__________
+#
+#		velocity = (velocity.bounce(collision.normal))*Vector2(rebote,rebote)
+#		print("velocidad de la bala, tras la colision " + str (velocity))
+#		if collision.collider.has_method("hit"):
+#			collision.collider.hit()
+#			print(collision.collider.hit())
+	pass
 
-		velocity = (velocity.bounce(collision.normal))*Vector2(rebote,rebote)
-		print("velocidad de la bala, tras la colision " + str (velocity))
-		if collision.collider.has_method("hit"):
-			collision.collider.hit()
-			print(collision.collider.hit())
-
-
-func _on_VisibilityNotifier2D_viewport_exited(viewport):
-	print ("La bala sale de la viewport y desaparece")
-	queue_free()
-	pass # replace with function body
+#
+#func _on_VisibilityNotifier2D_viewport_exited(viewport):
+#	print ("La bala sale de la viewport y desaparece")
+#	queue_free()
+#	pass # replace with function body
