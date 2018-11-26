@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD Personaje/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD 1 Vida/HUD1vida.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD 2 Tiempo/HUD2tiempo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD 3 Puntos/HUD3Puntos.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 4 Arma/HUD4Arma.tscn" type="PackedScene" id=5]
 
-[node name="HUD" type="Node" index="0"]
+[node name="HUD" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -41,5 +42,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 _sections_unfolded = [ "Transform" ]
 
 [node name="HUD3puntosNodo" parent="." index="3" instance=ExtResource( 4 )]
+
+[node name="HUD4armaNodo" parent="." index="4" instance=ExtResource( 5 )]
 
 
