@@ -12,7 +12,7 @@ extends Node2D
 #var posicion
 
 
-var preGameOver = preload("res://Ejecutable/Menus/Game Over/GameOver.tscn").instance()
+var preGameOver = preload("res://Ejecutable/Menus/Win/Win.tscn").instance()
 var Personaje1Muerto
 #func _ready():
 #	posicion = $".".get_position()
