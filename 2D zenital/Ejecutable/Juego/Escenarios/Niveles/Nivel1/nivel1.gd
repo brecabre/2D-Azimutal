@@ -13,5 +13,5 @@ func _process(delta):
 	pass
 
 func centrar_Fondo():
-	set_position(get_viewport().size/2)
+	#set_position(get_viewport().size/2)
 	pass
