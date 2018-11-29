@@ -25,22 +25,22 @@ func _ready():
 	
 	add_child(preTime)
 	MiNodoHUD = get_children()
-	MiNodoHUD[5].set_name("Text_Tiempo")
+	MiNodoHUD[6].set_name("Text_Tiempo")
 	GarfTiempo = get_node("/root/partida/HUD/Text_Tiempo/Label_datos_comunes")
 	GarfTiempo.set_position(Vector2(posi1.x , posi1.y+40))
 	
 	add_child(prePuntos)
 	MiNodoHUD = get_children()
-	MiNodoHUD[6].set_name("Text_Puntos")
+	MiNodoHUD[7].set_name("Text_Puntos")
 	GrafPuntos = get_node("/root/partida/HUD/Text_Puntos/Label_datos_comunes")
 	GrafPuntos.set_position(Vector2(posi1.x , posi1.y+80))
 	
 	
 	add_child(preInfo)
 	MiNodoHUD = get_children()
-	MiNodoHUD[7].set_name("Text_Info")
+	MiNodoHUD[8].set_name("Text_Info")
 	GrafInfo = get_node("/root/partida/HUD/Text_Info/Label_datos_comunes")
-	GrafInfo.set_position(Vector2(posi1.x , posi1.y+120))
+	GrafInfo.set_position(Vector2(posi1.x , posi1.y+160))
 	GrafInfo.set_text("En scrip: Cuidado con las IDs sumar una a cada set name, cuando instances se añaden nodos manual")
 	
 
