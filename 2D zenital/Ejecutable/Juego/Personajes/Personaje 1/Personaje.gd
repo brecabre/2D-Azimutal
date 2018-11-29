@@ -11,6 +11,8 @@ var velocidad  = 10000
 var preGameOver = preload("res://Ejecutable/Menus/Game Over/GameOver.tscn").instance()
 var Personaje1Muerto
 
+onready var escenaBala = preload("res://Ejecutable/Juego/Personajes/ComunesPersonaje/bala/bala.tscn")
+
 # var pa la vida:
 
 func _ready():
@@ -48,6 +50,9 @@ func _process(delta):
 		motion.y = velocidad * delta
 	else:
 		motion.y = 0
+	if Input.is_action_pressed("disparo"):
+		disparo()
+		pass
 		
 # Limites para el movimiento
 	if position.x > get_viewport().size.x:
@@ -69,15 +74,17 @@ func _process(delta):
 #		bajaVida()
 		
 	if is_on_wall():
-		print("pared")
+#		print("pared")
 		bajaVida()
 		
 		
 #esto detecta collision
 	if is_on_ceiling():
-		print("colision!!")
-		print($".".get_slide_collision(0))
+#		print("colision!!")
+#		print($".".get_slide_collision(0))
 #		bajaVida()
+		pass
+	pass
 		
 
 	
@@ -85,7 +92,7 @@ func _process(delta):
 	if Global.vida < 0:
 		get_node("/root/Global Menus").add_child(preGameOver)
 		$".".queue_free()
-		print("no muero")
+#		print("no muero")
 		
 		#esto es una prueba pa a apagar la partida 
 		get_tree().get_root() # Access via scene main loop.
@@ -105,5 +112,11 @@ func _process(delta):
 func bajaVida():
 		if $".".get_slide_collision(0).get_collider().is_in_group("Dano"):
 			Global.vida -= 1
-			print("Vida: " + str(Global.vida))
-			print("Capa0: " , $".".get_slide_collision(0).get_collider().is_in_group("Dano"))
+#			print("Vida: " + str(Global.vida))
+#			print("Capa0: " , $".".get_slide_collision(0).get_collider().is_in_group("Dano"))
+
+func disparo():
+	var bala = escenaBala.instance()
+	bala.apretarGatillo($PositionBala.global_position, rotation)
+	get_parent().add_child(bala)
+
