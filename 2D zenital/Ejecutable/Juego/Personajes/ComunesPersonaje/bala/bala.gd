@@ -1,23 +1,17 @@
 extends KinematicBody2D
-
+#bala enemigo
 var speed = 50
 var velocity = Vector2()
 #Establecer el valor para rebote entre 0.5 y 1.1 y añadir limites.
 var rebote = 1
 
 
-
 func apretarGatillo(position, rotation):
 	velocity = Vector2(speed, 0).rotated(rotation)
 
-	
-	
 
 func _process(delta):
-	
-	
-	
-	
+
 	var collision = move_and_collide(velocity * delta)
 	
 	if collision:
@@ -36,8 +30,8 @@ func _process(delta):
 #			print(collision.collider.hit())
 	pass
 
-#
-#func _on_VisibilityNotifier2D_viewport_exited(viewport):
+
+func _on_VisibilityNotifier2D_viewport_exited(viewport):
 #	print ("La bala sale de la viewport y desaparece")
-#	queue_free()
-#	pass # replace with function body
+	queue_free()
+	pass # replace with function body
