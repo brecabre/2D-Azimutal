@@ -50,6 +50,7 @@ func _process(delta):
 		motion.y = velocidad * delta
 	else:
 		motion.y = 0
+		
 	if Input.is_action_pressed("disparo"):
 		disparo()
 		pass
@@ -66,23 +67,36 @@ func _process(delta):
 #	print ("pos X: " + str(position.x))
 #	print ("pos Y: " + str(position.y))
 
+#mover: poniendo el valor de movimiento motion aqui velo lineal
+	motion = move_and_slide(motion)
+#	motion = move_and_slide(motion,UP)
+#	probar a quintar el UP)
+#	girar
+	look_at(position + motion)
+	
+#	# Update game logic here.
+
+
+
 #esto es una prueba pa la colision
 #esto me gusta pa platarformas
 	if  is_on_floor():
 		print("en el suelo")
-		print($".".get_slide_collision(0))
-#		bajaVida()
+#		print($".".get_slide_collision(0))
+		bajaVida()
+		pass
 		
 	if is_on_wall():
-#		print("pared")
+		print("pared")
 		bajaVida()
+		pass
 		
 		
 #esto detecta collision
 	if is_on_ceiling():
-#		print("colision!!")
+		print("colision!!")
 #		print($".".get_slide_collision(0))
-#		bajaVida()
+		bajaVida()
 		pass
 	pass
 		
@@ -99,14 +113,7 @@ func _process(delta):
 		Personaje1Muerto = get_parent()
 		Personaje1Muerto.get_parent().get_parent().queue_free()
 		
-#mover: poniendo el valor de movimiento motion aqui velo lineal
-	motion = move_and_slide(motion)
-#	motion = move_and_slide(motion,UP)
-#	probar a quintar el UP)
-#	girar
-	look_at(position + motion)
-	
-#	# Update game logic here.
+
 	pass
 
 func bajaVida():
@@ -114,9 +121,11 @@ func bajaVida():
 			Global.vida -= 1
 #			print("Vida: " + str(Global.vida))
 #			print("Capa0: " , $".".get_slide_collision(0).get_collider().is_in_group("Dano"))
+		pass
 
 func disparo():
 	var bala = escenaBala.instance()
 	bala.apretarGatillo($PositionBala.global_position, rotation)
-	get_parent().add_child(bala)
+	get_parent().get_parent().get_parent().get_parent().add_child(bala)
+	print ($PositionBala.global_position)
 
