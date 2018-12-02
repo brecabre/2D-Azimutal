@@ -8,8 +8,8 @@ func _ready():
 
 func _process(delta):
 #	print (Position2D.)
-	print ("position: " + str(position))
-	print ("global position: " + str(global_position))
+#	print ("position: " + str(position))
+#	print ("global position: " + str(global_position))
 	pass
 
 func centrar_Fondo():
