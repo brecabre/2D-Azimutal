@@ -11,6 +11,8 @@ var velocidad  = 10000
 var preGameOver = preload("res://Ejecutable/Menus/Game Over/GameOver.tscn").instance()
 var Personaje1Muerto
 
+onready var escenaBala = preload("res://Ejecutable/Juego/Personajes/ComunesPersonaje/bala/bala.tscn")
+
 # var pa la vida:
 
 func _ready():
@@ -49,6 +51,10 @@ func _process(delta):
 	else:
 		motion.y = 0
 		
+	if Input.is_action_pressed("disparo"):
+		disparo()
+		pass
+		
 # Limites para el movimiento
 	if position.x > get_viewport().size.x:
 		position.x = get_viewport().size.x
@@ -61,37 +67,6 @@ func _process(delta):
 #	print ("pos X: " + str(position.x))
 #	print ("pos Y: " + str(position.y))
 
-#esto es una prueba pa la colision
-#esto me gusta pa platarformas
-	if  is_on_floor():
-		print("en el suelo")
-		print($".".get_slide_collision(0))
-#		bajaVida()
-		
-	if is_on_wall():
-		print("pared")
-		bajaVida()
-		
-		
-#esto detecta collision
-	if is_on_ceiling():
-		print("colision!!")
-		print($".".get_slide_collision(0))
-#		bajaVida()
-		
-
-	
-#la muerte de la cucuracha :) :) 
-	if Global.vida < 0:
-		get_node("/root/Global Menus").add_child(preGameOver)
-		$".".queue_free()
-		print("no muero")
-		
-		#esto es una prueba pa a apagar la partida 
-		get_tree().get_root() # Access via scene main loop.
-		Personaje1Muerto = get_parent()
-		Personaje1Muerto.get_parent().get_parent().queue_free()
-		
 #mover: poniendo el valor de movimiento motion aqui velo lineal
 	motion = move_and_slide(motion)
 #	motion = move_and_slide(motion,UP)
@@ -100,10 +75,57 @@ func _process(delta):
 	look_at(position + motion)
 	
 #	# Update game logic here.
+
+
+
+#esto es una prueba pa la colision
+#esto me gusta pa platarformas
+	if  is_on_floor():
+		print("en el suelo")
+#		print($".".get_slide_collision(0))
+		bajaVida()
+		pass
+		
+	if is_on_wall():
+		print("pared")
+		bajaVida()
+		pass
+		
+		
+#esto detecta collision
+	if is_on_ceiling():
+		print("colision!!")
+#		print($".".get_slide_collision(0))
+		bajaVida()
+		pass
+	pass
+		
+
+	
+#la muerte de la cucuracha :) :) 
+	if Global.vida < 0:
+		get_node("/root/Global Menus").add_child(preGameOver)
+		$".".queue_free()
+#		print("no muero")
+		
+		#esto es una prueba pa a apagar la partida 
+		get_tree().get_root() # Access via scene main loop.
+		Personaje1Muerto = get_parent()
+		Personaje1Muerto.get_parent().get_parent().queue_free()
+		
+
 	pass
 
 func bajaVida():
 		if $".".get_slide_collision(0).get_collider().is_in_group("Dano"):
 			Global.vida -= 1
-			print("Vida: " + str(Global.vida))
-			print("Capa0: " , $".".get_slide_collision(0).get_collider().is_in_group("Dano"))
+#			print("Vida: " + str(Global.vida))
+#			print("Capa0: " , $".".get_slide_collision(0).get_collider().is_in_group("Dano"))
+		pass
+
+func disparo():
+	var bala = escenaBala.instance()
+	bala.apretarGatillo($PositionBala.global_position, rotation)
+	get_parent().get_parent().get_parent().get_parent().add_child(bala)
+	print ($PositionBala.global_position)
+
