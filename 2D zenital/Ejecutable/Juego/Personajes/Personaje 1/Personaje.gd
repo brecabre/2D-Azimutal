@@ -12,6 +12,7 @@ var preGameOver = preload("res://Ejecutable/Menus/Game Over/GameOver.tscn").inst
 var Personaje1Muerto
 
 onready var escenaBala = preload("res://Ejecutable/Juego/Personajes/ComunesPersonaje/bala/bala.tscn")
+var sonidoDisparo
 
 # var pa la vida:
 
@@ -20,6 +21,7 @@ func _ready():
 	# Initialization here
 	Global.vida = 20
 	set_process(true)
+	sonidoDisparo = get_node("AudioDisparo")
 
 	pass
 
@@ -125,6 +127,10 @@ func bajaVida():
 		pass
 
 func disparo():
+	
+	if sonidoDisparo.is_playing() == false:
+		sonidoDisparo.play()
+		
 	var bala = escenaBala.instance()
 	bala.apretarGatillo($PositionBala.global_position, rotation)
 	get_parent().get_parent().get_parent().get_parent().add_child(bala)
