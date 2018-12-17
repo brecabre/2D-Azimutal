@@ -6,7 +6,9 @@ var velocity = Vector2()
 var rebote = 1
 
 
-func apretarGatillo(position, rotation):
+func apretarGatillo(pos, dir):
+	rotation = dir
+	position = pos
 	velocity = Vector2(speed, 0).rotated(rotation)
 
 
