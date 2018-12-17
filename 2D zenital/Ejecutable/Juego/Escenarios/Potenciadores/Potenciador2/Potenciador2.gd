@@ -46,7 +46,7 @@ func _on_Area2D_body_entered(body):
 	print("entra en el potenciador 1")
 	add_child(prePuntosP1)
 	tiempoEntra = OS.get_ticks_msec()
-	PuntosP1 =get_node("/root/partida/Potenciador2/Datos_comunes/Label_datos_comunes")	
+	PuntosP1 =get_node("Datos_comunes/Label_datos_comunes")	
 	PuntosP1.set_position(posicion)#	GraficaVida.set_text("Aquí pondré la vida actualizada")
 	PuntosP1.set_text("Arma nueva y "+ str(SumaPuntos) + " puntos")
 	PuntosP1.set("custom_colors/font_color",Color(1,0,0))

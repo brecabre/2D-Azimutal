@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Ejecutable/Juego/Personajes/Personaje 1/Personaje.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Juego/Personajes/Personaje 1/Personaje1.png" type="Texture" id=2]
+[ext_resource path="res://Ejecutable/Juego/Personajes/Sonidos/Disparo.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,11 +16,11 @@ extents = Vector2( 29, 32.5 )
 ]]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 3
+collision_mask = 3
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
 
 [node name="Personaje1" type="Sprite" parent="Personaje" index="0"]
 
@@ -30,5 +31,16 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="PositionBala" type="Position2D" parent="Personaje" index="2"]
+
+[node name="AudioDisparo" type="AudioStreamPlayer2D" parent="Personaje" index="3"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 
