@@ -1,5 +1,5 @@
 extends KinematicBody2D
-#bala del player
+#bala del enemigo
 
 var speed = 50
 var velocity = Vector2()
