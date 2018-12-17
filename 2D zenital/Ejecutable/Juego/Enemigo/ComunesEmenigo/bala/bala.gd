@@ -1,5 +1,5 @@
 extends KinematicBody2D
-#bala del player
+#bala del enemigo
 
 var speed = 50
 var velocity = Vector2()
@@ -7,22 +7,23 @@ var velocity = Vector2()
 var rebote = 1
 
 func apretarGatillo(position, rotation):
+
 	velocity = Vector2(speed, 0).rotated(rotation)
-	print ("pos bala" + str(position))
+	print ("pos bala player: " + str(position))
 	
 
 func _process(delta):
-	
-	
+
+
 	var collision = move_and_collide(velocity * delta)
-	
-	if collision:
-		if collision.get_collider().is_in_group("Player"):
-			Global.vida -= 1
-#			print ("bala quita vida")
-		
-#		print(collision.get_collider().is_in_group("Player"))
-		queue_free()
+
+#	if collision:
+#		if collision.get_collider().is_in_group("Player"):
+#			Global.vida -= 1
+##			print ("bala quita vida")
+#
+##		print(collision.get_collider().is_in_group("Player"))
+#		queue_free()
 #
 ##________Este codigo es para que la bala pueda rebotar__________
 #
@@ -31,7 +32,7 @@ func _process(delta):
 #		if collision.collider.has_method("hit"):
 #			collision.collider.hit()
 #			print(collision.collider.hit())
-	pass
+#	pass
 
 #
 func _on_VisibilityNotifier2D_viewport_exited(viewport):

@@ -26,7 +26,7 @@ func _process(delta):
 	
 #_____________Disparar cada cierto tiempo_______________
 func _on_tiempo_de_disparo_timeout():
-	print ("Disparo Enemigo")
+#	print ("Disparo Enemigo")
 	disparo()
 	pass 
 	
@@ -38,8 +38,8 @@ func disparo():
 	
 	
 #	print(bala.name)
-	print("posicion del disparo: " + str($PositionBala.position))
-	print("posEnemigo: " + str(posEnemigo))
+#	print("posicion del disparo: " + str($PositionBala.position))
+#	print("posEnemigo: " + str(posEnemigo))
 #	print($PositionBala.global_position)
 	
 
