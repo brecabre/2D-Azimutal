@@ -1,5 +1,5 @@
 extends KinematicBody2D
-#bala enemigo
+#bala player
 var speed = 50
 var velocity = Vector2()
 #Establecer el valor para rebote entre 0.5 y 1.1 y añadir limites.
