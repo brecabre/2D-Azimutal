@@ -8,7 +8,9 @@
 custom_solver_bias = 0.0
 extents = Vector2( 3, 3 )
 
-[node name="_Bala_" type="KinematicBody2D"]
+[node name="_Bala_" type="KinematicBody2D" index="0" groups=[
+"Dano",
+]]
 
 input_pickable = false
 collision_layer = 1
