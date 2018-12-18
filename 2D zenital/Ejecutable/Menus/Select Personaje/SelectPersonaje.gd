@@ -2,6 +2,10 @@ extends Node
 
 var SelecNiveles = preload("res://Ejecutable/Menus/Select Niveles/SelectNiveles.tscn").instance()
 
+func _ready():
+	$VBoxContainer.set_position(Vector2(get_viewport().size.x/4 , get_viewport().size.y/4))
+	pass
+	
 func _load_scene(personaje):
 	Global.personaje = load(personaje).instance()
 	Global.personaje.set_name("personaje")

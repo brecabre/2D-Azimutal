@@ -2,7 +2,9 @@ extends Node
 
 var partida 
 
-
+func _ready():
+	$VBoxContainer.set_position(Vector2(get_viewport().size.x/4 , get_viewport().size.y/4))
+	pass
 
 func _load_scene(nivel):
 	partida = load(nivel).instance()
