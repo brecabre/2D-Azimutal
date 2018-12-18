@@ -12,7 +12,7 @@ func _ready():
 	Enemigo = get_parent().get_node("Enemigo")
 	graf_vida = get_node("/root/partida/HUD/HUD1vidaNodo/Datos_comunes/Label_datos_comunes")
 	graf_vida.set_text("Aquí pondré la vida actualizada")
-	graf_vida.set_position(Vector2(100,100))
+	graf_vida.set_position(Vector2(Enemigo.global_position.x-50 , global_position.y-60))
 #	print (Enemigo.vidaMalo)
 #	print (Enemigo.position)
 	pass
