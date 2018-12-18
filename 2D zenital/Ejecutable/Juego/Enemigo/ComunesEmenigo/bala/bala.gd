@@ -17,13 +17,13 @@ func _process(delta):
 
 	var collision = move_and_collide(velocity * delta)
 
-#	if collision:
-#		if collision.get_collider().is_in_group("Player"):
-#			Global.vida -= 1
+	if collision:
+		if collision.get_collider().is_in_group("Player"):
+			Global.vida -= 1
 ##			print ("bala quita vida")
 #
 ##		print(collision.get_collider().is_in_group("Player"))
-#		queue_free()
+		queue_free()
 #
 ##________Este codigo es para que la bala pueda rebotar__________
 #

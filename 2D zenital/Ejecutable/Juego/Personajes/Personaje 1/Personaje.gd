@@ -128,8 +128,12 @@ func bajaVida():
 
 func disparo():
 	
-	if sonidoDisparo.is_playing() == false:
+	if sonidoDisparo.is_playing():
+		sonidoDisparo.stop()
 		sonidoDisparo.play()
+	else:
+		sonidoDisparo.play()
+		
 		
 	var bala = escenaBala.instance()
 	bala.apretarGatillo($PositionBala.global_position, rotation)
