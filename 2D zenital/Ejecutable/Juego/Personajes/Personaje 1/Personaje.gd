@@ -129,14 +129,15 @@ func bajaVida():
 func disparo():
 	
 	if sonidoDisparo.is_playing():
-		sonidoDisparo.stop()
-		sonidoDisparo.play()
+#		sonidoDisparo.stop()
+#		sonidoDisparo.play()
+		pass
 	else:
 		sonidoDisparo.play()
 		
 		
-	var bala = escenaBala.instance()
-	bala.apretarGatillo($PositionBala.global_position, rotation)
-	get_parent().get_parent().get_parent().get_parent().add_child(bala)
-	print ($PositionBala.global_position)
+		var bala = escenaBala.instance()
+		bala.apretarGatillo($PositionBala.global_position, rotation)
+		get_parent().get_parent().get_parent().get_parent().add_child(bala)
+		print ($PositionBala.global_position)
 
