@@ -19,7 +19,7 @@ var sonidoDisparo
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	Global.vida = 20
+	Global.vida = 2000
 	set_process(true)
 	sonidoDisparo = get_node("AudioDisparo")
 
