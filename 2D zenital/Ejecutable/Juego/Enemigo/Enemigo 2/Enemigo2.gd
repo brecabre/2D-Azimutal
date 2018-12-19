@@ -49,7 +49,7 @@ func _process(delta):
 
 
 
-# ___________Para que el enemigo m
+# ___________Para que el enemigo muera
 	if vidaMalo < 1:
 		print("muere malo")
 		print($".".get_parent().queue_free())
@@ -72,19 +72,3 @@ func disparo():
 	bala.apretarGatillo($PositionBala.global_position, rotation)
 	get_parent().add_child(bala)
 	
-	
-
-
-#_____________Disparar cada cierto tiempo_______________
-#func bajaVidaMalo():
-#		print($".".get_slide_collision(0).get_collider().name)
-#		if $".".get_slide_collision(0).get_collider().is_in_group("Dano"):
-#			Global.vida -= 1
-##			
-#		pass
-#
-
-	
-	
-	
-
