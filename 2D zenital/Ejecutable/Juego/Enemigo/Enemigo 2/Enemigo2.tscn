@@ -14,8 +14,8 @@ extents = Vector2( 31.0545, 31.0893 )
 [node name="HUD1vidaNodo" parent="." index="0" instance=ExtResource( 1 )]
 
 [node name="Enemigo" type="KinematicBody2D" parent="." index="1" groups=[
-"Dano",
 "Enemigo",
+"Dano",
 ]]
 
 input_pickable = false
