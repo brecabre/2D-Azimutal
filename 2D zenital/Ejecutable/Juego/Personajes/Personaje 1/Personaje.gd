@@ -22,6 +22,8 @@ func _ready():
 	Global.vida = 2000
 	set_process(true)
 	sonidoDisparo = get_node("AudioDisparo")
+	print(get_tree().get_nodes_in_group("Enemigo"))
+	print(get_tree().get_nodes_in_group("Enemigo").size())
 
 	pass
 
