@@ -18,8 +18,10 @@ func _process(delta):
 	var collision = move_and_collide(velocity * delta)
 	
 	if collision:
-		if collision.get_collider().is_in_group("Player"):
-			Global.vida -= 1
+		if collision.get_collider().is_in_group("Enemigo"):
+#			print(collision.get_collider().name)
+			collision.get_collider().vidaMalo -= 1
+#			Global.vida -= 1
 		
 #		print(collision.get_collider().is_in_group("Player"))
 		queue_free()
