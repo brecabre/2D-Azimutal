@@ -10,6 +10,7 @@ var contadorPosM = 1000
 var veloMalo = 100
 
 var vidaMalo = 10
+var regVida  = vidaMalo
 
 
 func _ready():
@@ -21,6 +22,7 @@ func _process(delta):
 #______________Para que el enemigo mire al player_________________
 	posPlayer1 = get_parent().get_parent().get_node("PosicionSalida/personaje/Personaje").position
 	look_at(Vector2(posPlayer1))
+	
 	pass
 #______________Para maver enemigo _________________
 #	move_and_collide(Vector2(
@@ -46,6 +48,7 @@ func _process(delta):
 		print("pared malo pared malo colisión")
 		vidaMalo -=1
 		pass
+		
 
 
 
@@ -54,6 +57,11 @@ func _process(delta):
 		print("muere malo")
 		print($".".get_parent().queue_free())
 #		$".".queue_free()
+
+# ___________Para que el enemigo suene con un nodico de audio 2D
+	if vidaMalo != regVida:
+		print(get_node("AudioMuereEnemigo").play())
+		regVida = vidaMalo
 		
 # ___________Para que el enemigo mire a donde apunta el raton_____________
 #func _physics_process(delta):
