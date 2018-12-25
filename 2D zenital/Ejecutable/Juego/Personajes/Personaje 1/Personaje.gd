@@ -124,11 +124,15 @@ func _process(delta):
 
 func bajaVida():
 	
-	
+	if sonidoDano.is_playing():
+		pass
+	else:
+		
 #		print($".".get_slide_collision(0).get_collider().name)
-	if $".".get_slide_collision(0).get_collider().is_in_group("Dano"):
-		Global.vida -= 1
-		sonidoDano.play()
+		if $".".get_slide_collision(0).get_collider().is_in_group("Dano"):
+			Global.vida -= 1
+			sonidoDano.play()
+		
 		
 			
 #			print("Vida: " + str(Global.vida))
