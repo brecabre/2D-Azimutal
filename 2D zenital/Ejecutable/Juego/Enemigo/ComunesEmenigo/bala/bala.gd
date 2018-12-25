@@ -9,7 +9,7 @@ var rebote = 1
 func apretarGatillo(position, rotation):
 
 	velocity = Vector2(speed, 0).rotated(rotation)
-	print ("pos bala player: " + str(position))
+#	print ("pos bala player: " + str(position))
 	
 
 func _process(delta):
@@ -20,6 +20,7 @@ func _process(delta):
 	if collision:
 		if collision.get_collider().is_in_group("Player"):
 			Global.vida -= 1
+			get_parent().get_parent().get_node("PosicionSalida/personaje/Personaje/AudioDano").play()
 ##			print ("bala quita vida")
 #
 ##		print(collision.get_collider().is_in_group("Player"))
