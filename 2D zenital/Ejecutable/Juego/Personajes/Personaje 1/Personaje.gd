@@ -148,5 +148,5 @@ func disparo():
 		var bala = escenaBala.instance()
 		bala.apretarGatillo($PositionBala.global_position, rotation)
 		get_parent().get_parent().get_parent().get_parent().add_child(bala)
-		print ($PositionBala.global_position)
+#		print ($PositionBala.global_position)
 
