@@ -13,6 +13,7 @@ var Personaje1Muerto
 
 onready var escenaBala = preload("res://Ejecutable/Juego/Personajes/ComunesPersonaje/bala/bala.tscn")
 var sonidoDisparo
+var sonidoDano
 
 # var pa la vida:
 
@@ -22,6 +23,7 @@ func _ready():
 	Global.vida = 2000
 	set_process(true)
 	sonidoDisparo = get_node("AudioDisparo")
+	sonidoDano = get_node("AudioDano")
 	print(get_tree().get_nodes_in_group("Enemigo"))
 	print(get_tree().get_nodes_in_group("Enemigo").size())
 
@@ -121,9 +123,14 @@ func _process(delta):
 	pass
 
 func bajaVida():
-		print($".".get_slide_collision(0).get_collider().name)
-		if $".".get_slide_collision(0).get_collider().is_in_group("Dano"):
-			Global.vida -= 1
+	
+	
+#		print($".".get_slide_collision(0).get_collider().name)
+	if $".".get_slide_collision(0).get_collider().is_in_group("Dano"):
+		Global.vida -= 1
+		sonidoDano.play()
+		
+			
 #			print("Vida: " + str(Global.vida))
 #			print("Capa0: " , $".".get_slide_collision(0).get_collider().is_in_group("Dano"))
 		pass
