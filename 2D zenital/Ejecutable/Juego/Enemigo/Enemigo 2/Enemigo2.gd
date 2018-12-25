@@ -55,8 +55,8 @@ func _process(delta):
 
 # ___________Para que el enemigo muera
 	if vidaMalo < 1:
-		# print("muere malo")
-		# print($".".get_parent().queue_free())
+#		print("muere malo")
+		print($".".get_parent().queue_free())
 #		$".".queue_free()
 		pass
 
