@@ -4,6 +4,10 @@ var partida
 
 func _ready():
 	$VBoxContainer.set_position(Vector2(get_viewport().size.x/4 , get_viewport().size.y/4))
+	if Global.pantalla == 0:
+		print(get_node("VBoxContainer/Nivel2").get_global_transform()[2])
+		get_node("VBoxContainer/Nivel2").hide()
+#		get_node("VBoxContainer/Nivel2").set_global_transform()[2] = Vector2(-100,-100)
 	pass
 
 func _load_scene(nivel):
