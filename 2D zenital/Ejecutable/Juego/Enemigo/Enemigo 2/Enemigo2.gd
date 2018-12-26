@@ -32,7 +32,8 @@ func _process(delta):
 		motionM.y =  veloMalo*delta
 		contadorPosM -= 1
 	if contadorPosM <= 500 and contadorPosM > 0:
-		print($".".position)
+		# print($".".position)
+		# print($".".position)
 		motionM.y = - veloMalo*delta
 		contadorPosM -= 1
 	if contadorPosM == 0:
@@ -40,12 +41,12 @@ func _process(delta):
 	motionM = move_and_slide(motionM)
 	
 	if  is_on_floor():
-		print("en el suelo malo malo colisión")
+		# print("en el suelo malo malo colisión")
 		vidaMalo -=1
 		pass
 		
 	if is_on_wall():
-		print("pared malo pared malo colisión")
+		# print("pared malo pared malo colisión")
 		vidaMalo -=1
 		pass
 		
@@ -54,13 +55,14 @@ func _process(delta):
 
 # ___________Para que el enemigo muera
 	if vidaMalo < 1:
-		print("muere malo")
+#		print("muere malo")
 		print($".".get_parent().queue_free())
 #		$".".queue_free()
+		pass
 
 # ___________Para que el enemigo suene con un nodico de audio 2D
 	if vidaMalo != regVida:
-		print(get_node("AudioMuereEnemigo").play())
+		# print(get_node("AudioMuereEnemigo").play())
 		regVida = vidaMalo
 		
 # ___________Para que el enemigo mire a donde apunta el raton_____________
@@ -70,7 +72,7 @@ func _process(delta):
 
 #_____________Disparar cada cierto tiempo_______________
 func _on_tiempo_de_disparo_timeout():
-	print ("Disparo Enemigo")
+	# print ("Disparo Enemigo")
 	disparo()
 	pass
 	
