@@ -19,7 +19,7 @@ func _process(delta):
 	
 	if collision:
 		if collision.get_collider().is_in_group("Enemigo"):
-#			print(collision.get_collider().name)
+			collision.get_collider().get_node("AudioMuereEnemigo").play()             
 			collision.get_collider().vidaMalo -= 1
 #			Global.vida -= 1
 		
