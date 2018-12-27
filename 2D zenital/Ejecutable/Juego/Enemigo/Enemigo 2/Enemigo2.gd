@@ -43,11 +43,13 @@ func _process(delta):
 	if  is_on_floor():
 		# print("en el suelo malo malo colisión")
 		vidaMalo -=1
+		get_node("AudioMuereEnemigo").play()
 		pass
 		
 	if is_on_wall():
 		# print("pared malo pared malo colisión")
-		vidaMalo -=1
+		vidaMalo -= 1
+		get_node("AudioMuereEnemigo").play()
 		pass
 		
 

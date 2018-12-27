@@ -10,5 +10,5 @@ func _on_Area2D_body_entered(body):
 		$".".queue_free()
 		get_tree().get_root() # Access via scene main loop.
 		Personaje1Muerto = get_parent().queue_free()
-		Global.pantalla += 1
+		Global.pantalla = 1
 	pass 
