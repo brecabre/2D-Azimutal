@@ -3,7 +3,7 @@
 [ext_resource path="res://Ejecutable/Menus/Select Niveles/SelectNiveles.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Menus/Comunes/Boton Menu principal.tscn" type="PackedScene" id=2]
 
-[node name="SelectNiveles" type="Node"]
+[node name="SelectNiveles" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -201,6 +201,8 @@ max_lines_visible = -1
 [node name="Boton Menu principal" parent="." index="1" instance=ExtResource( 2 )]
 
 [connection signal="pressed" from="VBoxContainer/Nivel1" to="." method="_on_Nivel1_pressed"]
+
+[connection signal="pressed" from="VBoxContainer/Nivel2" to="." method="_on_Nivel2_pressed"]
 
 [connection signal="script_changed" from="Boton Menu principal" to="." method="_on_Boton_Menu_principal_script_changed"]
 
