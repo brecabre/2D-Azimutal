@@ -40,3 +40,15 @@ func _on_Nivel2_pressed():
 	_load_scene("res://Ejecutable/Juego/Escenarios/Niveles/Nivel2/nivel2.tscn")
 	get_parent().get_node("boton").play()
 	pass # replace with function body
+
+
+func _on_Nivel3_pressed():
+	_load_scene("res://Ejecutable/Juego/Escenarios/Niveles/Nivel3/nivel3.tscn")
+	get_parent().get_node("boton").play()
+	pass # replace with function body
+
+
+func _on_Nivel4_pressed():
+	_load_scene("res://Ejecutable/Juego/Escenarios/Niveles/Nivel4/nivel4.tscn")
+	get_parent().get_node("boton").play()
+	pass # replace with function body
