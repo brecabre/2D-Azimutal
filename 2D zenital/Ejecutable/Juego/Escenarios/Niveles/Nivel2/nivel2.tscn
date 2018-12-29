@@ -12,7 +12,7 @@
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Potenciadores/Potenciador2/Potenciador2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Sonidos/Sampler_Nivel_1.wav" type="AudioStream" id=11]
 
-[node name="nivel2" type="Node2D" index="0"]
+[node name="nivel2" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -86,19 +86,7 @@ position = Vector2( 618.042, 171.582 )
 
 position = Vector2( 336.811, 388.628 )
 
-[node name="Enemigo3" parent="." index="14" instance=ExtResource( 6 )]
-
-position = Vector2( 490.65, 368.284 )
-
-[node name="Enemigo4" parent="." index="15" instance=ExtResource( 6 )]
-
-position = Vector2( 591.542, 42.564 )
-
-[node name="Enemigo5" parent="." index="16" instance=ExtResource( 6 )]
-
-position = Vector2( 205.633, 291.023 )
-
-[node name="AudioMusicNivel_01" type="AudioStreamPlayer2D" parent="." index="17"]
+[node name="AudioMusicNivel_01" type="AudioStreamPlayer2D" parent="." index="14"]
 
 stream = ExtResource( 11 )
 volume_db = 0.0
