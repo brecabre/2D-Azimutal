@@ -16,6 +16,8 @@ func _on_Area2D_body_entered(body):
 			Global.pantalla = 1
 		if Global.nivel == "nivel2":
 			Global.pantalla = 2
+		if Global.nivel == "nivel3":
+			Global.pantalla = 3
 		print(Global.nivel)
 #		if Global.nivel == "res://Ejecutable/Juego/Escenarios/Niveles/Nivel1/nivel1.tscn":
 			
