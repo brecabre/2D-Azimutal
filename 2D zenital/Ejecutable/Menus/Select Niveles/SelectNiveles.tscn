@@ -204,6 +204,10 @@ max_lines_visible = -1
 
 [connection signal="pressed" from="VBoxContainer/Nivel2" to="." method="_on_Nivel2_pressed"]
 
+[connection signal="pressed" from="VBoxContainer/Nivel3" to="." method="_on_Nivel3_pressed"]
+
+[connection signal="pressed" from="VBoxContainer/Nivel4" to="." method="_on_Nivel4_pressed"]
+
 [connection signal="script_changed" from="Boton Menu principal" to="." method="_on_Boton_Menu_principal_script_changed"]
 
 [connection signal="pressed" from="Boton Menu principal/Button" to="." method="_on_Button_pressed"]
