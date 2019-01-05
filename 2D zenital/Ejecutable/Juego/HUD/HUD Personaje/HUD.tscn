@@ -37,7 +37,7 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Sprite" type="Sprite" parent="TextoAuxiliarTitulo" index="0"]
 
-position = Vector2( -734.627, 526.695 )
+position = Vector2( -740, 525 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
