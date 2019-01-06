@@ -40,10 +40,29 @@ func _ready():
 func _process(delta):
 	contador += 100*delta
 	if contador > tope:
-		print("fuera")
-
-		get_node("/root/Global Menus").add_child(SelecNivel)
-		get_parent().get_node("Musica Menus").play()
-		$".".queue_free()
+		
+		if Global.pantalla == 4:
+			
+			#Aquí meter la animación de ganar, antes que el menú
+			get_node("/root/Global Menus").add_child(MenuPrincipal)
+			
+			# reset de valores
+			Global.nivel = 0
+			Global.vida = 0
+			Global.puntos = 0
+			Global.arma = 0
+			Global.pantalla = 0
+			
+			get_parent().get_node("Musica Menus").play()
+			$".".queue_free()
+			
+		
+		else: 
+			print("fuera")
+	
+			get_node("/root/Global Menus").add_child(SelecNivel)
+			get_parent().get_node("Musica Menus").play()
+			$".".queue_free()
+			
 #		print (Global.personaje.name)
 	pass
