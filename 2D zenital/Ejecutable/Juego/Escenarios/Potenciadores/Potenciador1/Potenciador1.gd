@@ -38,9 +38,7 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 	
-	
-#	porsi quieres vida
-#	Global.vida += 20
+	print(get_node("AudioPotenciador").play())
 	Global.puntos += SumaVida
 	print("entra en el potenciador 1")
 	add_child(prePuntosP1)
