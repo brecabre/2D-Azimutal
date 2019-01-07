@@ -31,6 +31,31 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="BotonSelecNivel" type="Button" parent="Label" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 11.0
+margin_top = 38.0
+margin_right = 98.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Selec Nivel"
+flat = false
+align = 1
+
 [node name="AudioWin" type="AudioStreamPlayer2D" parent="." index="2"]
 
 stream = ExtResource( 3 )
@@ -41,5 +66,7 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[connection signal="pressed" from="Label/BotonSelecNivel" to="." method="_on_BotonSelecNivel_pressed"]
 
 

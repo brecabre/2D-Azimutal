@@ -1,6 +1,6 @@
 extends Node
 
-var tiempoEscena = 500
+var tiempoEscena = 50000
 var contador = 0
 onready var MenuPrincipal = preload("res://Ejecutable/Menus/Menu Principal/MenuPrincipal.tscn").instance()
 onready var SelecNivel = preload("res://Ejecutable/Menus/Select Niveles/SelectNiveles.tscn").instance()
@@ -66,3 +66,10 @@ func _process(delta):
 			
 #		print (Global.personaje.name)
 	pass
+
+
+func _on_BotonSelecNivel_pressed():
+	get_node("/root/Global Menus").add_child(SelecNivel)
+	get_parent().get_node("Musica Menus").play()
+	$".".queue_free()
+	pass # replace with function body
