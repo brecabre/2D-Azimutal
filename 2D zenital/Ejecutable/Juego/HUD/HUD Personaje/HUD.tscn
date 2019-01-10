@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD Personaje/HUD.gd" type="Script" id=1]
-[ext_resource path="res://Ejecutable/Juego/HUD/HUD 1 Vida/HUD1vida.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Ejecutable/Juego/HUD/HUD 2 Tiempo/HUD2tiempo.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Ejecutable/Juego/HUD/HUD 3 Puntos/HUD3Puntos.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Ejecutable/Juego/HUD/HUD 4 Arma/HUD4Arma.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Ejecutable/Juego/HUD/HUD 5 Video/HUD5video.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Ejecutable/Juego/HUD/HUD 6 Pause/Pause.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Ejecutable/Menus/Creditos/Cyclo-pi.png" type="Texture" id=2]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 1 Vida/HUD1vida.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 2 Tiempo/HUD2tiempo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 3 Puntos/HUD3Puntos.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 4 Arma/HUD4Arma.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 5 Video/HUD5video.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 6 Pause/Pause.tscn" type="PackedScene" id=8]
 
 [node name="HUD" type="Node" index="0"]
 
@@ -34,21 +35,28 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="HUD1vidaNodo" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Sprite" type="Sprite" parent="TextoAuxiliarTitulo" index="0"]
+
+position = Vector2( -740, 525 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="HUD1vidaNodo" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 500, 500 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="HUD2tiempoNodo" parent="." index="2" instance=ExtResource( 3 )]
+[node name="HUD2tiempoNodo" parent="." index="2" instance=ExtResource( 4 )]
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="HUD3puntosNodo" parent="." index="3" instance=ExtResource( 4 )]
+[node name="HUD3puntosNodo" parent="." index="3" instance=ExtResource( 5 )]
 
-[node name="HUD4armaNodo" parent="." index="4" instance=ExtResource( 5 )]
+[node name="HUD4armaNodo" parent="." index="4" instance=ExtResource( 6 )]
 
-[node name="HUD5videoNodo" parent="." index="5" instance=ExtResource( 6 )]
+[node name="HUD5videoNodo" parent="." index="5" instance=ExtResource( 7 )]
 
-[node name="Pause" parent="." index="6" instance=ExtResource( 7 )]
+[node name="Pause" parent="." index="6" instance=ExtResource( 8 )]
 
 
