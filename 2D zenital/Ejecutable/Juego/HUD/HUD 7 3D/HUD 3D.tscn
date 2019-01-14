@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://HUD 3D.gd" type="Script" id=1]
+[ext_resource path="res://Ejecutable/Juego/HUD/HUD 7 3D/HUD 3D.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD 7 3D/robot_demo.png" type="Texture" id=2]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD 7 3D/Modelos 3D/player.scn" type="PackedScene" id=3]
 
@@ -53,6 +53,10 @@ shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Rendering" ]
 
 [node name="player" parent="Viewport" index="0" instance=ExtResource( 3 )]
+
+[node name="Camera" parent="Viewport/player" index="1"]
+
+current = true
 
 
 [editable path="Viewport/player"]
