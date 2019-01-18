@@ -18,3 +18,9 @@ func _on_Jugar_pressed():
 	get_parent().get_node("boton").play()
 	$".".queue_free()
 	pass 
+
+
+func _on_Salir_pressed():
+	get_tree().quit()
+	get_parent().get_node("boton").play()
+	pass # replace with function body
