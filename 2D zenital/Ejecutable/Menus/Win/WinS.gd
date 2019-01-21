@@ -1,9 +1,11 @@
 extends Node
 
-var tiempoEscena = 50000
+var tiempoEscena = 500
 var contador = 0
 onready var MenuPrincipal = preload("res://Ejecutable/Menus/Menu Principal/MenuPrincipal.tscn").instance()
 onready var SelecNivel = preload("res://Ejecutable/Menus/Select Niveles/SelectNiveles.tscn").instance()
+onready var Final = preload("res://Ejecutable/Menus/Final/Final.tscn").instance()
+
 
 var MiNodoHUDWin
 var posi1 = Vector2(615,40)
@@ -39,12 +41,29 @@ func _ready():
 
 func _process(delta):
 	contador += 100*delta
+	
+	if Global.pantalla == 4:
+		
+		#Aquí meter la animación de ganar, antes que el menú
+		get_node("/root/Global Menus").add_child(Final)
+		
+		# reset de valores
+		Global.nivel = 0
+		Global.vida = 0
+		Global.puntos = 0
+		Global.arma = 0
+		Global.pantalla = 0
+		get_parent().get_node("Musica Menus").play()
+		$".".queue_free()
+	
+	
+	
 	if contador > tiempoEscena:
 		
 		if Global.pantalla == 4:
 			
 			#Aquí meter la animación de ganar, antes que el menú
-			get_node("/root/Global Menus").add_child(MenuPrincipal)
+			get_node("/root/Global Menus").add_child(Final)
 			
 			# reset de valores
 			Global.nivel = 0
