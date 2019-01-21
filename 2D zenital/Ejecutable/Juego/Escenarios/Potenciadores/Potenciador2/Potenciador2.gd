@@ -38,12 +38,12 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 	
-	
+	get_node("AudioPotenciador2").play()
 #	porsi quieres vida
 #	Global.vida += 20
 	Global.arma = 2
 	Global.puntos += SumaPuntos
-	print("entra en el potenciador 1")
+	print("entra en el potenciador 2")
 	add_child(prePuntosP1)
 	tiempoEntra = OS.get_ticks_msec()
 	PuntosP1 =get_node("Datos_comunes/Label_datos_comunes")	
