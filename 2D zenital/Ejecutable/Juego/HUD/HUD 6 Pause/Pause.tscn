@@ -3,7 +3,6 @@
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD 6 Pause/Pause.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Menus/Comunes/Boton Menu principal.tscn" type="PackedScene" id=2]
 
-
 [node name="Pause" type="Control" index="0"]
 
 anchor_left = 0.0
@@ -88,6 +87,7 @@ margin_left = 9.0
 margin_top = 60.0
 margin_right = 49.0
 margin_bottom = 100.0
+script = null
 
 [node name="Continue" type="Button" parent="Pause-PopUp" index="1"]
 
@@ -135,6 +135,9 @@ max_lines_visible = -1
 
 [connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
 
+[connection signal="pressed" from="Pause-PopUp/Boton Menu principal/Button" to="." method="_on_Button_pressed"]
+
 [connection signal="pressed" from="Pause-PopUp/Continue" to="." method="_on_Continue_pressed"]
 
 
+[editable path="Pause-PopUp/Boton Menu principal"]

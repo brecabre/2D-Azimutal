@@ -1,6 +1,20 @@
 extends Control
 
+onready var MenPrincipal = load("res://Ejecutable/Menus/Menu Principal/MenuPrincipal.tscn").instance()
 
+
+
+
+func _on_Button_pressed():
+	get_node("/root/Global Menus").add_child(MenPrincipal)
+#	print(get_parent().get_parent().name)
+	get_node("/root/Global Menus/boton").play()
+	get_node("/root/partida").queue_free()
+	get_tree().paused = false
+#	get_parent().queue_free()
+	
+	
+	pass # replace with function body
 
 
 func _ready():
@@ -16,6 +30,7 @@ func _ready():
 
 func _on_Pause_pressed():
 	get_tree().paused = true
+	get_node("/root/Global Menus/boton").play()
 	$"Pause-PopUp".show()
 
 	pass # replace with function body
@@ -23,5 +38,6 @@ func _on_Pause_pressed():
 
 func _on_Continue_pressed():
 	get_tree().paused = false
+	get_node("/root/Global Menus/boton").play()
 	$"Pause-PopUp".hide()
 	pass # replace with function body
