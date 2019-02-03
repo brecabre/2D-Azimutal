@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Ejecutable/Menus/Menu Principal/MenuPrincipal.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Menus/Sonidos/boton.wav" type="AudioStream" id=2]
 [ext_resource path="res://Ejecutable/Menus/Sonidos/Musica.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Ejecutable/Menus/Creditos/titulo.png" type="Texture" id=4]
 
-[node name="MenuPrincipal" type="Node" index="0"]
+[node name="MenuPrincipal" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -201,6 +202,12 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[node name="Sprite" type="Sprite" parent="." index="2"]
+
+position = Vector2( 739.442, 294.421 )
+scale = Vector2( 0.83037, 0.821087 )
+texture = ExtResource( 4 )
 
 [connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_Jugar_pressed"]
 
