@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Niveles/Nivel3/nivel3.gd" type="Script" id=1]
-[ext_resource path="res://Ejecutable/Juego/Escenarios/Niveles/Nivel1/fondo.jpg" type="Texture" id=2]
+[ext_resource path="res://Ejecutable/Juego/Escenarios/Niveles/Nivel3/fondo3.jpg" type="Texture" id=2]
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Piezas/Pieza1/Pieza1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Piezas/Pieza2/Pieza2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD Personaje/HUD.tscn" type="PackedScene" id=5]
@@ -25,6 +25,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 1.9447, 5.53735 )
 texture = ExtResource( 2 )
+offset = Vector2( 512, 300 )
 _sections_unfolded = [ "Animation", "Offset", "Region" ]
 
 [node name="PosicionSalida" type="Position2D" parent="." index="1"]
