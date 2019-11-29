@@ -1,7 +1,7 @@
 extends Node2D
 var cancion
 
-onready var Fondo = $Fondo
+#onready var Fondo = $Fondo
 
 func _ready():
 	centrar_Fondo()
@@ -10,7 +10,7 @@ func _ready():
 	
 	pass
 
-func _process(delta):
+func _process(_delta):
 #	print (Position2D.)
 #	print ("position: " + str(position))
 #	print ("global position: " + str(global_position))
