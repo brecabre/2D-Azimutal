@@ -10,7 +10,7 @@ func _ready():
 	print($".".get_children()[0].play())
 	pass
 
-func _process(delta):
+func _process(_delta):
 	if $".".get_children()[0].is_playing() == false:
 		print($".".get_children()[0].play())
 #	# Called every frame. Delta is time since last frame.
