@@ -24,7 +24,7 @@ func _ready():
 
 	pass
 
-func _process(delta):
+func _process(_delta):
 	
 #	print ("angulo : " + str((get_parent().motionM.angle())*180/3.14))
 #	bar_vida.rect_rotation = get_parent().motionM.angle()
