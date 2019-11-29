@@ -40,7 +40,7 @@ func _ready():
 	pass
 
 func _process(_delta):
-	contador += 100*delta
+	contador += 100*_delta
 	
 	if Global.pantalla == 4:
 		
