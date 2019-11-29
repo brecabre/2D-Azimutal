@@ -36,7 +36,7 @@ func _process(_delta):
 	pass
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	
 	print(get_node("AudioPotenciador").play())
 	Global.puntos += SumaVida
