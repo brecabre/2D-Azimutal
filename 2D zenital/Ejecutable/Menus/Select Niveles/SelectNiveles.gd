@@ -20,7 +20,7 @@ func _ready():
 	if Global.pantalla == 3:
 		pass
 
-func _process(delta):
+func _process(_delta):
 #	print (Global.personajeSelect)
 	
 	pass
