@@ -36,7 +36,7 @@ func _process(delta):
 	pass
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	
 	get_node("AudioPotenciador2").play()
 #	porsi quieres vida
