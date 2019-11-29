@@ -63,7 +63,7 @@ func _ready():
 	GrafInfo.set_text("En scrip: Cuidado con las IDs sumar una a cada set name, cuando instances se añaden nodos manual")
 	
 
-func _process(delta):
+func _process(_delta):
 	#Actualizo valor de pantalla "La vida: 
 	GraficaVida.set_text("La vida: "+ str(Global.vida)+" con scrip")
 	#Actualizo valor de pantalla "Tiempo transcurrido:
