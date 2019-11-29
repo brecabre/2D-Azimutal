@@ -15,7 +15,7 @@ func _ready():
 	posicion = $".".get_position()
 
 
-func _process(delta):
+func _process(_delta):
 
 	if banderaVisible:
 		#esto pa mover el numeriko
