@@ -1,17 +1,17 @@
 extends Node2D
 
 var preGameOver = preload("res://Ejecutable/Menus/Win/Win.tscn").instance()
-var Personaje1Muerto
 
 
-func _on_Area2D_body_entered(body):
+
+func _on_Area2D_body_entered(_body):
 	#esto es una prueba pa a apagar la partida 
 	print(Global.nivel)
 	if get_tree().get_nodes_in_group("Enemigo").size() == 0:
 		get_node("/root/Global Menus").add_child(preGameOver)
 		$".".queue_free()
-		get_tree().get_root() # Access via scene main loop.
-		Personaje1Muerto = get_parent().queue_free()
+#		get_tree().get_root() # Access via scene main loop.
+		get_parent().queue_free()
 		if Global.nivel == "nivel1":
 			Global.pantalla = 1
 		if Global.nivel == "nivel2":

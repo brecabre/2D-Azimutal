@@ -21,7 +21,7 @@ func _ready():
 func _process(delta):
 #______________Para que el enemigo mire al player_________________
 	posPlayer1 = get_parent().get_parent().get_node("PosicionSalida/personaje/Personaje").position
-	look_at(Vector2(posPlayer1))
+	look_at(posPlayer1)
 	
 	pass
 #______________Para maver enemigo _________________

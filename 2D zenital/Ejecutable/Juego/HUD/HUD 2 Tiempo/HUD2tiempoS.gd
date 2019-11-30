@@ -14,7 +14,7 @@ func _ready():
 	graf_tiempo.set_position(Vector2(815,100))
 	pass
 
-func _process(delta):
+func _process(_delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 	graf_tiempo.set_text("Tiempo transcurrido: " + str(OS.get_ticks_msec() - start_time) + " ms")

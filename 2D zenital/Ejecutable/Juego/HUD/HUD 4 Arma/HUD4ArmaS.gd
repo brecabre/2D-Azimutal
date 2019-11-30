@@ -14,7 +14,7 @@ func _ready():
 	graf_vida.set_position(Vector2(815,180))
 	pass
 
-func _process(delta):
+func _process(_delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 	if Global.arma == 0:

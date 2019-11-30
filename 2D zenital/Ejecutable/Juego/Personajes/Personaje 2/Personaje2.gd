@@ -115,7 +115,7 @@ func _process(delta):
 #		print("no muero")
 		
 		#esto es una prueba pa a apagar la partida 
-		get_tree().get_root() # Access via scene main loop.
+#		get_tree().get_root() # Access via scene main loop.
 		Personaje1Muerto = get_parent()
 		Personaje1Muerto.get_parent().get_parent().queue_free()
 		

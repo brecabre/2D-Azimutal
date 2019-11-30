@@ -8,7 +8,7 @@ var viewport_sprite = null
 # variables for the sprite animation
 const MAX_FRAME_FOR_SPRITE = 4
 const FRAME_SWITCH_TIME = 0.2
-var frame_switch_timer = 0
+#var frame_switch_timer = 0
 
 func _ready():
 	viewport = get_node("Viewport")
@@ -27,7 +27,7 @@ func _ready():
 
 
 # Simple frame based animation
-func _process(delta):
+func _process(_delta):
 #	frame_switch_timer += delta
 #	if frame_switch_timer >= FRAME_SWITCH_TIME:
 #		frame_switch_timer -= FRAME_SWITCH_TIME

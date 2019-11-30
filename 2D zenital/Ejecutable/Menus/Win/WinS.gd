@@ -2,7 +2,7 @@ extends Node
 
 var tiempoEscena = 500
 var contador = 0
-onready var MenuPrincipal = preload("res://Ejecutable/Menus/Menu Principal/MenuPrincipal.tscn").instance()
+#onready var MenuPrincipal = preload("res://Ejecutable/Menus/Menu Principal/MenuPrincipal.tscn").instance()
 onready var SelecNivel = preload("res://Ejecutable/Menus/Select Niveles/SelectNiveles.tscn").instance()
 onready var Final = preload("res://Ejecutable/Menus/Final/Final.tscn").instance()
 
@@ -39,8 +39,8 @@ func _ready():
 	
 	pass
 
-func _process(delta):
-	contador += 100*delta
+func _process(_delta):
+	contador += 100*_delta
 	
 	if Global.pantalla == 4:
 		

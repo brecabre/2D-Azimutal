@@ -8,5 +8,5 @@ var puntos = 0
 var arma = 0
 var pantalla = 0
 
-
-	
+func _ready():
+	print(personaje, RutaPersonajeSelect, nivel, vida,puntos, arma, pantalla)

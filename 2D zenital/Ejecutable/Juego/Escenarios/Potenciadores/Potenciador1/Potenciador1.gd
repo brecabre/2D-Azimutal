@@ -15,12 +15,12 @@ func _ready():
 	posicion = $".".get_position()
 
 
-func _process(delta):
+func _process(_delta):
 
 	if banderaVisible:
 		#esto pa mover el numeriko
-		PuntosP1.set_position(Vector2(PuntosP1.get_position().x , PuntosP1.get_position().y+VeloNum*delta))
-		contColor = contColor + delta
+		PuntosP1.set_position(Vector2(PuntosP1.get_position().x , PuntosP1.get_position().y+VeloNum*_delta))
+		contColor = contColor + _delta
 		# esto pal máximo de color llevar cuidao
 		if contColor >= 1:
 			contColor = 1
@@ -28,7 +28,7 @@ func _process(delta):
 		PuntosP1.set("custom_colors/font_color",Color(0.5,0,contColor))
 	
 	else:
-		contColor = delta
+		contColor = _delta
 		
 	if OS.get_ticks_msec() - tiempoEntra  > 2000 and banderaVisible:
 		$".".queue_free()
@@ -36,7 +36,7 @@ func _process(delta):
 	pass
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	
 	print(get_node("AudioPotenciador").play())
 	Global.puntos += SumaVida

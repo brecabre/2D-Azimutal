@@ -26,9 +26,6 @@ _sections_unfolded = [ "Collision", "Transform", "collision" ]
 [node name="Personaje1" type="Sprite" parent="Personaje" index="0"]
 
 texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 6, 8, 113, 120 )
-_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="Colision" type="CollisionShape2D" parent="Personaje" index="1"]
 
@@ -38,6 +35,7 @@ shape = SubResource( 1 )
 
 [node name="AudioDisparo" type="AudioStreamPlayer2D" parent="Personaje" index="3"]
 
+position = Vector2( 2.39494, -1.19748 )
 stream = ExtResource( 3 )
 volume_db = 0.0
 pitch_scale = 1.0
@@ -49,6 +47,7 @@ area_mask = 1
 
 [node name="AudioDano" type="AudioStreamPlayer2D" parent="Personaje" index="4"]
 
+position = Vector2( 4.19116, 4.7899 )
 stream = ExtResource( 4 )
 volume_db = 0.0
 pitch_scale = 1.0
