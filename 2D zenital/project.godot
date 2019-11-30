@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Plantilla2D azimutal"
+config/name="Cyber_time_77"
 run/main_scene="res://Ejecutable/Global/Global Menus/Global Menus.tscn"
 boot_splash/image="res://Cyclo-pi.png"
 config/icon="res://icon.png"
