@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Niveles/Nivel2/nivel2.gd" type="Script" id=1]
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Niveles/Nivel2/fondo2.jpg" type="Texture" id=2]
-[ext_resource path="res://Ejecutable/Juego/Escenarios/Tileables/Tileable1.res" type="TileSet" id=3]
+[ext_resource path="res://Ejecutable/Juego/Escenarios/Tileables/Baldosas/Tileable1.res" type="TileSet" id=3]
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Piezas/Pieza1/Pieza1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Piezas/Pieza2/Pieza2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Ejecutable/Juego/HUD/HUD Personaje/HUD.tscn" type="PackedScene" id=6]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Potenciadores/Potenciador0Salir/Potenciador0.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Potenciadores/Potenciador2/Potenciador2.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Ejecutable/Juego/Escenarios/Sonidos/Sampler_Nivel_1.wav" type="AudioStream" id=12]
+
 
 [node name="nivel2" type="Node2D"]
 script = ExtResource( 1 )
