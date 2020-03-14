@@ -3,6 +3,16 @@
 14-03-2020
 255th One Hour Game Jam (14 Mar 2020)
 
+14-03-2020
+255th One Hour Game Jam (14 Mar 2020)
+
+Template
+
+https://github.com/CycloPi/2D-Azimutal/tree/a314c1277325f47a5a00dcf05d82c141eb759cf2
+
+
+Mazmongadas, for Mozilla Firefox, Cyclo Pi Studio
+
 Secuencia juego en una hora
 1. Lincar la Game Jam
         Game Jam 14-03-2020: https://onehourgamejam.com/?page=jam&jam=255 
